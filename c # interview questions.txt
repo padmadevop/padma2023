@@ -1,0 +1,92 @@
+1) What is C#?
+  C# is an object-oriented, type-safe, and managed language that is compiled by .Net framework to generate Microsoft Intermediate Language.
+
+2) Can multiple catch blocks be executed?
+   No, Multiple catch blocks of similar type can’t be executed. Once the proper catch code executed, the control is transferred to the finally block, 
+-  and then the code that follows the finally block gets executed.
+
+4) What is the difference between public, static, and void?
+   Public declared variables or methods are accessible anywhere in the application. Static declared variables or methods are globally accessible without
+   creating an instance of the class. Static member are by default not globally accessible it depends upon the type of access modified used. 
+   The compiler stores the address of the method as the entry point and uses this information to begin execution before any objects are created. 
+   And Void is a type modifier that states that the method or variable does not return any value.
+ 
+5) What is an object?
+
+An object is an instance of a class through which we access the methods of that class. “New” keyword is used to create an object.
+ A class that creates an object in memory will contain the information about the methods, variables, and behavior of that class.
+
+6) Define Constructors
+A constructor is a member function in a class that has the same name as its class. The constructor is automatically invoked whenever
+ an object class is created. It constructs the values of data members while initializing the class.
+
+7) What is Jagged Arrays?
+The Array which has elements of type array is called jagged Array. The elements can be of different dimensions and sizes.
+ We can also call jagged Array as an Array of arrays.
+
+8)9) What is the use of ‘using’ statement in C#?
+The ‘using’ block is used to obtain a resource and process it and then automatically dispose of when the execution of the block completed.
+
+10) What is serialization?
+When we want to transport an object through a network, then we have to convert the object into a stream of bytes. 
+The process of converting an object into a stream of bytes is called Serialization. For an object to be serializable, 
+it should implement ISerialize Interface. De-serialization is the reverse process of creating an object from a stream of bytes.
+
+11) Can we use “this” command within a static method?
+We can’t use ‘This’ in a static method because we can only use static variables/methods in a static method.
+
+12) What is the difference between constants and read-only?
+Constant variables are declared and initialized at compile time. The value can’t be changed afterward. Read-only is used only 
+when we want to assign the value at run time.
+13) What is an interface class? Give one example of it
+An Interface is an abstract class which has only public abstract methods, and the methods only have the declaration and not the definition.
+ These abstract methods must be implemented in the inherited classes.
+using system;
+using system.collections.generic;
+using system.Text;
+using system.linq;
+using system.threading.tasks;
+
+namespace DemoApp
+{
+  interface inf1
+  {
+   void SetApp(int v1,string s1)  
+   string GetApp();
+   }
+class inf2:inf1
+{
+  protected int v2;
+  protected string s2;
+ public void SetApp(int v1,string s1)
+{
+   v2=v1;
+s2=s1;
+}
+public GetApp(){
+return s2;
+}
+ static void Main(string[] args)
+  {
+   inf2 pinf= new inf2();
+
+   pTutor.SetApp(1,".Net by Guru99");
+
+   Console.WriteLine(pinf.GetApp());
+
+   Console.ReadKey();
+  }
+}
+}
+14) What are value types and reference types?
+A value type holds a data value within its own memory space. Example
+
+int a = 30;
+Reference type stores the address of the Object where the value is being stored. It is a pointer to another memory location.
+
+string b = "Hello Guru99!!";
+
+
+
+                 
+
